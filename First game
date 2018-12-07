@@ -1,0 +1,38 @@
+import pygame
+pygame.init()
+
+# do stuff
+gameWindow = pygame.display.set_mode((1000, 600))
+pygame.display.set_caption("First Game")
+
+
+#---- game starts
+
+gameActive = True
+while gameActive:
+    #----Game LOOP
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            gameActive = False
+
+# stuff happens
+
+# pygame.draw.rect(surface,color,rectangle,width)
+
+    # pygame.draw.rect(surface, color, (x, y, width, height), line thickness)
+    pygame.draw.rect(gameWindow, (255, 0, 0), (100, 100, 100, 100), 5)
+    pygame.draw.rect(gameWindow, (255, 0, 0), (300, 100, 100, 100))
+
+    #surf = pygame.Surface((width, height))
+    surf = pygame.Surface((150, 75))
+   # surf.fill((color))
+    surf.fill((0, 255, 0))
+   #gameWindow.blit(surface, (x, y))
+    gameWindow.blit(surf, (500, 200))
+
+    pygame.display.update()
+    # stuff ends
+
+
+pygame.quit()
+quit()
